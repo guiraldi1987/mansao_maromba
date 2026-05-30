@@ -130,4 +130,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 5. EFEITO INTERATIVO DE TILT E ROTAÇÃO 3D NA LATA
+  const productWrapper = document.querySelector('.hero__image-wrapper');
+  const productImage = document.querySelector('.hero__image');
+  const glowRing = document.querySelector('.hero__glow-ring');
+
+  if (productWrapper && productImage) {
+    productWrapper.addEventListener('mousemove', (e) => {
+      const rect = productWrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left; // Coordenada X dentro do container
+      const y = e.clientY - rect.top;  // Coordenada Y dentro do container
+      
+      const width = rect.width;
+      const height = rect.height;
+      
+      // Mapeamento de rotação máxima de 28 graus
+      const rotateX = ((y / height) - 0.5) * -28; 
+      const rotateY = ((x / width) - 0.5) * 28;
+      
+      // Ajusta a transição de forma dinâmica para movimentos imediatos sem atraso
+      productImage.style.transition = 'transform 0.08s ease-out';
+      productImage.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.06)`;
+      
+      if (glowRing) {
+        glowRing.style.transition = 'transform 0.08s ease-out';
+        glowRing.style.transform = `translate(-50%, -50%) translate(${-rotateY * 0.5}px, ${-rotateX * 0.5}px) scale(1.05)`;
+      }
+    });
+
+    productWrapper.addEventListener('mouseleave', () => {
+      // Restaura com uma transição suave e fluida
+      productImage.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      productImage.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      
+      if (glowRing) {
+        glowRing.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        glowRing.style.transform = 'translate(-50%, -50%) scale(1)';
+      }
+    });
+  }
 });
