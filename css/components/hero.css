@@ -160,6 +160,8 @@
   width: 100%;
   max-width: 360px;
   animation: float-can 6s ease-in-out infinite;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .hero__glow-ring {
@@ -174,17 +176,16 @@
   z-index: -1;
   animation: glow-pulse 4s ease-in-out infinite alternate;
   filter: blur(25px);
+  transition: transform 0.15s ease-out;
 }
 
 .hero__image {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(255, 60, 0, 0.22));
-  transition: transform var(--transition-slow);
-}
-
-.hero__image:hover {
-  transform: scale(1.04) rotate(2deg);
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 @keyframes float-can {
