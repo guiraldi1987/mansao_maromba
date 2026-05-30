@@ -45,7 +45,7 @@
 /* Botão Primário (Solid Volcanic Magma & Ouro) */
 .btn--primary {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
-  color: var(--color-text-primary);
+  color: #020403; /* Obsidian para contraste de acessibilidade e sofisticação editorial no neon */
   box-shadow: var(--shadow-neon);
 }
 
@@ -53,6 +53,7 @@
   transform: translateY(-3px);
   box-shadow: var(--shadow-neon-hover);
   background: linear-gradient(135deg, var(--color-accent-hover) 0%, var(--color-accent) 100%);
+  color: #020403;
 }
 
 .btn--primary:active {
@@ -61,13 +62,14 @@
 
 /* Botão Secundário (Borda Neon) */
 .btn--secondary {
-  background: rgba(255, 85, 0, 0.05);
+  background: rgba(0, 255, 102, 0.05);
   color: var(--color-text-primary);
   border: 2px solid var(--color-accent);
 }
 
 .btn--secondary:hover {
   background: var(--color-accent);
+  color: #020403; /* Obsidian para contraste máximo contra fundo neon verde */
   box-shadow: var(--shadow-neon);
   transform: translateY(-3px);
 }
@@ -93,17 +95,17 @@
 
 /* Animação Pulse Glow para CTAs Críticos */
 .btn--pulse-glow {
-  animation: pulse-orange 2s infinite;
+  animation: pulse-green 2s infinite;
 }
 
-@keyframes pulse-orange {
+@keyframes pulse-green {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 60, 0, 0.6);
+    box-shadow: 0 0 0 0 rgba(0, 255, 102, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(255, 60, 0, 0);
+    box-shadow: 0 0 0 15px rgba(0, 255, 102, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 60, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 255, 102, 0);
   }
 }

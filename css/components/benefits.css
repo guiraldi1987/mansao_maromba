@@ -6,8 +6,8 @@
 
 .benefits__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .benefits__card {
@@ -15,52 +15,107 @@
   border: var(--border-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 36px 24px;
-  border-radius: var(--radius-md);
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Card 1 (Foco Blindado) - Bento Grid Highlight (Double width) */
+#benefit-card-1 {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  text-align: left;
+}
+
+#benefit-card-1 .benefits__icon-container {
+  margin: 0;
+  width: 72px;
+  height: 72px;
+}
+
+#benefit-card-1 .benefits__icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Card 4 (Recuperação Muscular) - Bento Grid Highlight (Double width) */
+#benefit-card-4 {
+  grid-column: span 2;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 32px;
+  text-align: left;
+}
+
+#benefit-card-4 .benefits__icon-container {
+  margin: 0;
+  width: 72px;
+  height: 72px;
+}
+
+#benefit-card-4 .benefits__icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Cards de tamanho padrão (2 e 3) */
+#benefit-card-2, #benefit-card-3 {
+  grid-column: span 1;
+  text-align: left;
+}
+
+#benefit-card-2 .benefits__icon-container,
+#benefit-card-3 .benefits__icon-container {
+  margin: 0 0 24px 0;
+}
+
+/* Efeito de Linha Decorativa no Topo */
 .benefits__card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
   transition: width var(--transition-normal);
 }
 
-.benefits__card:hover::before { width: 100%; }
+.benefits__card:hover::before {
+  width: 100%;
+}
 
 .benefits__card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 60, 0, 0.35);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(255, 60, 0, 0.08);
-  background: rgba(22, 22, 34, 0.65);
+  border-color: rgba(0, 255, 102, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 255, 102, 0.08);
+  background: rgba(16, 32, 22, 0.65);
 }
 
 .benefits__icon-container {
   width: 56px;
   height: 56px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 60, 0, 0.08);
+  border-radius: var(--radius-md);
+  background: rgba(0, 255, 102, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  border: 1px solid rgba(255, 60, 0, 0.2);
+  border: 1px solid rgba(0, 255, 102, 0.2);
   transition: all var(--transition-normal);
+  flex-shrink: 0;
 }
 
 .benefits__card:hover .benefits__icon-container {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
   border-color: var(--color-accent);
-  box-shadow: 0 0 20px rgba(255, 60, 0, 0.45);
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.45);
 }
 
 .benefits__icon {
@@ -71,28 +126,49 @@
 }
 
 .benefits__card:hover .benefits__icon {
-  fill: #fff;
+  fill: #000; /* Alto contraste com o gradiente neon green/lime do fundo do ícone */
 }
 
 .benefits__title {
   font-family: var(--font-title);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
+  color: var(--color-text-primary);
 }
 
 .benefits__description {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 992px) {
-  .benefits__grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 576px) {
-  .benefits__grid { grid-template-columns: 1fr; }
+  .benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  #benefit-card-1, #benefit-card-2, #benefit-card-3, #benefit-card-4 {
+    grid-column: span 1 !important;
+    flex-direction: column !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  
+  #benefit-card-1 .benefits__icon-container,
+  #benefit-card-4 .benefits__icon-container {
+    width: 56px !important;
+    height: 56px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  #benefit-card-1 .benefits__icon,
+  #benefit-card-4 .benefits__icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
 }

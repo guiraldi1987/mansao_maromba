@@ -2,7 +2,7 @@
 
 .about {
   background-color: var(--color-bg-secondary);
-  background-image: linear-gradient(135deg, rgba(255, 85, 0, 0.02) 0%, transparent 80%);
+  background-image: linear-gradient(135deg, rgba(0, 255, 102, 0.02) 0%, transparent 80%);
   position: relative;
 }
 
@@ -74,8 +74,8 @@
 
 .about__metric-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 85, 0, 0.3);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  border-color: rgba(0, 255, 102, 0.35);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4), 0 0 15px rgba(0, 255, 102, 0.05);
 }
 
 .about__metric-val {
@@ -86,7 +86,7 @@
   display: block;
   line-height: 1.1;
   margin-bottom: 5px;
-  text-shadow: 0 0 10px rgba(255, 85, 0, 0.2);
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
 }
 
 .about__metric-label {

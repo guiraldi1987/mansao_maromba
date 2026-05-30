@@ -170,4 +170,82 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 6. EFEITO GLOBAL DE BOLHAS DE GÁS QUE SEGUEM O MOUSE E TOQUE (EFEITO EFERVESCENTE)
+  let lastSpawnTime = 0;
+  
+  const spawnBubble = (clientX, clientY) => {
+    const now = Date.now();
+    // Limita a criação de bolhas a cada 40ms para garantir performance e visual denso efervescente
+    if (now - lastSpawnTime < 40) return;
+    lastSpawnTime = now;
+    
+    const bubble = document.createElement('div');
+    const size = Math.random() * 9 + 3; // Tamanho randômico entre 3px e 12px
+    
+    bubble.style.position = 'fixed';
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.borderRadius = '50%';
+    
+    // Visual de bolha efervescente premium: transparente, borda neon esmeralda, brilho inset e sombra suave
+    bubble.style.border = '1px solid rgba(0, 255, 102, 0.6)';
+    bubble.style.backgroundColor = 'rgba(163, 255, 0, 0.03)';
+    bubble.style.boxShadow = '0 0 6px rgba(0, 255, 102, 0.3), inset 0 0 4px rgba(255, 255, 255, 0.2)';
+    bubble.style.left = `${clientX}px`;
+    bubble.style.top = `${clientY}px`;
+    bubble.style.pointerEvents = 'none';
+    bubble.style.zIndex = '9998';
+    bubble.style.transform = 'translate(-50%, -50%)';
+    
+    // Detalhe de reflexo de luz interna (efeito volumétrico de gás)
+    if (size > 5) {
+      const bubbleHighlight = document.createElement('div');
+      bubbleHighlight.style.position = 'absolute';
+      bubbleHighlight.style.width = '25%';
+      bubbleHighlight.style.height = '25%';
+      bubbleHighlight.style.borderRadius = '50%';
+      bubbleHighlight.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+      bubbleHighlight.style.top = '15%';
+      bubbleHighlight.style.left = '15%';
+      bubble.appendChild(bubbleHighlight);
+    }
+    
+    document.body.appendChild(bubble);
+    
+    let opacity = 0.9;
+    let y = 0;
+    let xOffset = 0;
+    const wobbleSpeed = Math.random() * 0.04 + 0.02;
+    const riseSpeed = Math.random() * 1.8 + 1.0;
+    const horizontalDrift = Math.random() * 1.0 - 0.5; // Deriva sutil lateral
+    
+    const animateBubble = () => {
+      opacity -= 0.01; // Efeito de evaporação
+      y -= riseSpeed;  // Sobe continuamente
+      xOffset += horizontalDrift + Math.sin(y * wobbleSpeed) * 0.5; // Oscilação física sinusoidal
+      
+      bubble.style.opacity = opacity;
+      bubble.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${y}px))`;
+      
+      if (opacity > 0) {
+        requestAnimationFrame(animateBubble);
+      } else {
+        bubble.remove();
+      }
+    };
+    
+    requestAnimationFrame(animateBubble);
+  };
+
+  document.addEventListener('mousemove', (e) => {
+    spawnBubble(e.clientX, e.clientY);
+  });
+  
+  // Suporte total a toque em celulares (iPhone, Android, etc.) ao arrastar o dedo
+  document.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches.length > 0) {
+      spawnBubble(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
 });

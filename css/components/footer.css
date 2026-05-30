@@ -1,7 +1,7 @@
 /* --- COMPONENTE: FOOTER --- */
 
 .footer {
-  background-color: #050507;
+  background-color: var(--color-bg-secondary);
   padding: 80px 20px 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   position: relative;
@@ -50,7 +50,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #121217;
+  background: var(--color-bg-card);
   border: var(--border-glass);
   display: flex;
   align-items: center;
@@ -65,10 +65,15 @@
   transform: translateY(-3px);
 }
 
+.footer__social-link:hover .footer__social-icon {
+  fill: #020403; /* Obsidian para contraste máximo em cima do verde */
+}
+
 .footer__social-icon {
   width: 18px;
   height: 18px;
   fill: var(--color-text-primary);
+  transition: fill var(--transition-fast);
 }
 
 /* Colunas de Navegação */

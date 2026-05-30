@@ -1,7 +1,7 @@
 /* --- COMPONENTE: CTA --- */
 
 .cta {
-  background-image: linear-gradient(135deg, rgba(10, 10, 12, 0.95) 0%, rgba(20, 10, 5, 0.98) 100%), 
+  background-image: linear-gradient(135deg, rgba(2, 4, 3, 0.96) 0%, rgba(5, 8, 6, 0.98) 100%), 
                     url('../../assets/images/energy_bg.png');
   background-size: cover;
   background-position: center;
@@ -53,7 +53,7 @@
 
 .cta__title span {
   color: var(--color-accent);
-  text-shadow: 0 0 10px rgba(255, 85, 0, 0.3);
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.35);
 }
 
 .cta__description {
@@ -65,8 +65,8 @@
 
 /* Caixa de Preço com urgência */
 .cta__price-box {
-  background: rgba(24, 24, 31, 0.85);
-  border: 1px solid rgba(255, 85, 0, 0.3);
+  background: rgba(10, 20, 14, 0.85);
+  border: 1px solid rgba(0, 255, 102, 0.3);
   backdrop-filter: blur(8px);
   padding: 30px 50px;
   border-radius: 12px;
