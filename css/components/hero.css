@@ -6,8 +6,8 @@
   align-items: center;
   padding: 120px 20px 60px;
   background: 
-    radial-gradient(ellipse at 70% 50%, rgba(255, 85, 0, 0.08) 0%, transparent 60%),
-    linear-gradient(to bottom, rgba(7, 7, 10, 0.3) 0%, var(--color-bg-primary) 100%), 
+    radial-gradient(ellipse at 70% 50%, rgba(255, 60, 0, 0.12) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(4, 4, 6, 0.2) 0%, var(--color-bg-primary) 100%), 
     url('../../assets/images/gym_bg.png');
   background-size: cover;
   background-position: center;
@@ -42,8 +42,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 85, 0, 0.08);
-  border: 1px solid rgba(255, 85, 0, 0.2);
+  background: rgba(255, 60, 0, 0.06);
+  border: 1px solid rgba(255, 60, 0, 0.25);
   color: var(--color-accent);
   font-family: var(--font-title);
   font-weight: 700;
@@ -135,17 +135,17 @@
   transform: translate(-50%, -50%);
   width: 85%;
   height: 85%;
-  background: radial-gradient(circle, rgba(255, 85, 0, 0.25) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 60, 0, 0.35) 0%, rgba(255, 170, 0, 0.1) 40%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   animation: glow-pulse 4s ease-in-out infinite alternate;
-  filter: blur(20px);
+  filter: blur(25px);
 }
 
 .hero__image {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 85, 0, 0.15));
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(255, 60, 0, 0.22));
   transition: transform var(--transition-slow);
 }
 

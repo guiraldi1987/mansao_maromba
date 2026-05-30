@@ -42,9 +42,9 @@
   left: 100%;
 }
 
-/* Botão Primário (Solid Volcanic Orange) */
+/* Botão Primário (Solid Volcanic Magma & Ouro) */
 .btn--primary {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #cc3300 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
   color: var(--color-text-primary);
   box-shadow: var(--shadow-neon);
 }
@@ -98,12 +98,12 @@
 
 @keyframes pulse-orange {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 60, 0, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(255, 85, 0, 0);
+    box-shadow: 0 0 0 15px rgba(255, 60, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 85, 0, 0);
+    box-shadow: 0 0 0 0 rgba(255, 60, 0, 0);
   }
 }
