@@ -1,0 +1,171 @@
+/* --- COMPONENTE: HEADER --- */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 100;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+/* Estado ativo pós-scroll (ativado via JS) */
+.header--scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: var(--border-glass);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Mansão Maromba */
+.header__logo {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+}
+
+.header__logo span {
+  color: var(--color-accent);
+  text-shadow: 0 0 8px rgba(255, 85, 0, 0.4);
+}
+
+.header__logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__logo-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-accent);
+  filter: drop-shadow(0 0 4px rgba(255, 85, 0, 0.6));
+}
+
+/* Links de Navegação */
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__menu-link {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 8px 0;
+}
+
+.header__menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-normal);
+  box-shadow: 0 0 8px rgba(255, 85, 0, 0.8);
+}
+
+.header__menu-link:hover {
+  color: var(--color-text-primary);
+}
+
+.header__menu-link:hover::after {
+  width: 100%;
+}
+
+/* Botão Mobile Hamburger */
+.header__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 101;
+}
+
+.header__toggle-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--color-text-primary);
+  transition: all var(--transition-normal);
+  border-radius: 2px;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+  .header__toggle {
+    display: block;
+  }
+  
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #0f0f13;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    transition: right var(--transition-slow);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.8);
+    border-left: var(--border-glass);
+    padding: 40px;
+    z-index: 99;
+  }
+  
+  .header__menu--active {
+    right: 0;
+  }
+  
+  .header__toggle--active .header__toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-accent);
+  }
+  
+  .header__toggle--active .header__toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .header__toggle--active .header__toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-accent);
+  }
+  
+  .header__action {
+    display: none; /* Esconde CTA do header no mobile para simplificar */
+  }
+}

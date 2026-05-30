@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mansão Maromba: O sabor energético definitivo para esmagar os seus limites. Zero açúcar, cafeína anidra, beta-alanina e energia explosiva de alta performance.">
+  <title>Mansão Maromba - O Sabor Energético Premium</title>
+  
+  <!-- Estilos Gerais e Componentes (Garante funcionamento no protocolo file://) -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/benefits.css">
+  <link rel="stylesheet" href="css/components/ingredients.css">
+  <link rel="stylesheet" href="css/components/about.css">
+  <link rel="stylesheet" href="css/components/testimonials.css">
+  <link rel="stylesheet" href="css/components/cta.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  
+  <!-- Ícone da Aba (Favicon) -->
+  <link rel="icon" type="image/png" href="assets/images/lata.png">
+</head>
+<body>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header id="inicio" class="header">
+    <div class="header__container">
+      <a href="#inicio" class="header__logo" id="header-logo-link">
+        <img src="assets/images/logo.png" alt="Logo Mansão Maromba" class="header__logo-img">
+        Mansão <span>Maromba</span>
+      </a>
+      
+      <nav class="header__nav" aria-label="Navegação Principal">
+        <ul class="header__menu">
+          <li><a href="#inicio" class="header__menu-link" id="nav-inicio">Início</a></li>
+          <li><a href="#beneficios" class="header__menu-link" id="nav-beneficios">Benefícios</a></li>
+          <li><a href="#ingredientes" class="header__menu-link" id="nav-ingredientes">Tabela Nutricional</a></li>
+          <li><a href="#sobre" class="header__menu-link" id="nav-sobre">Sobre</a></li>
+          <li><a href="#depoimentos" class="header__menu-link" id="nav-depoimentos">Monstros</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__action">
+        <a href="#comprar" class="btn btn--primary" id="header-cta-btn">Quero Energia</a>
+      </div>
+
+      <button class="header__toggle" aria-label="Abrir menu" id="header-hamburger-menu">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Fórmula Premium Ultra Concentrada
+        </div>
+        <h1 class="hero__title">
+          Mansão <span>Maromba</span>
+        </h1>
+        <p class="hero__slogan">O sabor energético</p>
+        <p class="hero__description">
+          Prepare-se para o treino mais insano da sua vida. Desenvolvido para atletas de elite e bodybuilders hardcore, o Mansão Maromba traz foco cirúrgico, termogênese ampliada e força explosiva incomparável com zero carboidratos.
+        </p>
+        <div class="hero__ctas">
+          <a href="#comprar" class="btn btn--primary btn--large btn--pulse-glow" id="hero-primary-cta">
+            Comprar Agora
+            <!-- Ícone SVG de seta para a direita -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42 5.43 5.43H5z"/>
+            </svg>
+          </a>
+          <a href="#ingredientes" class="btn btn--secondary btn--large" id="hero-secondary-cta">Tabela Nutricional</a>
+        </div>
+      </div>
+      
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <div class="hero__glow-ring"></div>
+          <img src="assets/images/lata.png" alt="Lata do Energético Mansão Maromba Premium Laranja Vulcânico" class="hero__image" id="hero-product-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BENEFITS SECTION ==================== -->
+  <section id="beneficios" class="benefits">
+    <div class="container">
+      <h2 class="title-section" id="benefits-section-title">
+        Força <span>Sem Limites</span>
+      </h2>
+      <div class="benefits__grid">
+        
+        <!-- Card 1 -->
+        <div class="benefits__card" id="benefit-card-1">
+          <div class="benefits__icon-container">
+            <svg class="benefits__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+          </div>
+          <h3 class="benefits__title">Foco Blindado</h3>
+          <p class="benefits__description">Conexão mente-músculo impecável para manter você focado em cada repetição e série do seu treino.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="benefits__card" id="benefit-card-2">
+          <div class="benefits__icon-container">
+            <svg class="benefits__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.93 8.35L19 6h-3.35L15 4h-6L8.35 6H5l-.93 2.35L3 12v6h18v-6l-1.07-3.65zM12 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+            </svg>
+          </div>
+          <h3 class="benefits__title">Termogênese Acelerada</h3>
+          <p class="benefits__description">Ingredientes ativos termogênicos que aceleram o metabolismo e otimizam a queima de gordura.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="benefits__card" id="benefit-card-3">
+          <div class="benefits__icon-container">
+            <svg class="benefits__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.07 4.93C17.22 3.08 14.72 2 12 2S6.78 3.08 4.93 4.93C3.08 6.78 2 9.28 2 12s1.08 5.22 2.93 7.07C6.78 20.92 9.28 22 12 22s5.22-1.08 7.07-2.93C20.92 17.22 21 14.72 21 12s-1.08-5.22-2.93-7.07zM12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>
+          </div>
+          <h3 class="benefits__title">Zero Açúcar</h3>
+          <p class="benefits__description">Esqueça os picos de insulina. Energia limpa, contínua e sem quebras na sua dieta rigorosa de definição.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="benefits__card" id="benefit-card-4">
+          <div class="benefits__icon-container">
+            <svg class="benefits__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+            </svg>
+          </div>
+          <h3 class="benefits__title">Recuperação Muscular</h3>
+          <p class="benefits__description">Enriquecido com taurina e complexo de vitaminas B para suporte à regeneração muscular pós-esforço físico.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INGREDIENTS & NUTRITIONAL SECTION ==================== -->
+  <section id="ingredientes" class="ingredients">
+    <div class="container">
+      <h2 class="title-section" id="ingredients-section-title">
+        Fórmula <span>Científica Hardcore</span>
+      </h2>
+      
+      <div class="ingredients__container">
+        
+        <!-- Info dos Ingredientes Ativos -->
+        <div class="ingredients__info">
+          <h3 class="ingredients__subtitle">Ingredientes de Alta Performance</h3>
+          
+          <div class="ingredients__list">
+            
+            <div class="ingredients__item" id="ing-1">
+              <div class="ingredients__item-num">01</div>
+              <div>
+                <h4 class="ingredients__item-title">Cafeína Anidra (200mg)</h4>
+                <p class="ingredients__item-desc">Acelera o sistema nervoso central, proporcionando foco instantâneo e amplificando a força nos treinos explosivos.</p>
+              </div>
+            </div>
+
+            <div class="ingredients__item" id="ing-2">
+              <div class="ingredients__item-num">02</div>
+              <div>
+                <h4 class="ingredients__item-title">Beta-Alanina (1.500mg)</h4>
+                <p class="ingredients__item-desc">Reduz drasticamente a fadiga ácida intra-muscular, prolongando sua resistência ao esgotamento físico.</p>
+              </div>
+            </div>
+
+            <div class="ingredients__item" id="ing-3">
+              <div class="ingredients__item-num">03</div>
+              <div>
+                <h4 class="ingredients__item-title">Taurina (1.000mg)</h4>
+                <p class="ingredients__item-desc">Melhora o fluxo sanguíneo e a oxigenação celular nos tecidos, potencializando a resistência e o volume celular.</p>
+              </div>
+            </div>
+
+            <div class="ingredients__item" id="ing-4">
+              <div class="ingredients__item-num">04</div>
+              <div>
+                <h4 class="ingredients__item-title">Coenzima Q10 (50mg)</h4>
+                <p class="ingredients__item-desc">Combustível direto para a mitocôndria, impulsionando a produção natural de ATP para treinos prolongados.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tabela Nutricional Premium -->
+        <div class="ingredients__table-card" id="nutrition-table">
+          <div class="ingredients__table-title">Tabela Nutricional</div>
+          <div class="ingredients__table-subtitle">Porção: 1 Lata (269 ml) - Efeitos instantâneos de energia</div>
+          
+          <div class="ingredients__table-header">
+            <span>Quantidade por porção</span>
+            <span>% VD (*)</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Valor Energético</span>
+            <span>0 kcal = 0 kJ</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Carboidratos</span>
+            <span>0 g</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Açúcares Totais</span>
+            <span>0 g</span>
+          </div>
+
+          <div class="ingredients__table-row ingredients__table-row--accent">
+            <span>Beta-Alanina</span>
+            <span>1500 mg</span>
+          </div>
+
+          <div class="ingredients__table-row ingredients__table-row--accent">
+            <span>Taurina</span>
+            <span>1000 mg</span>
+          </div>
+
+          <div class="ingredients__table-row ingredients__table-row--accent">
+            <span>Cafeína</span>
+            <span>200 mg</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Vitamina B3 (Niacina)</span>
+            <span>16 mg (100% VD)</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Vitamina B5 (Ácido Pantotênico)</span>
+            <span>5,0 mg (100% VD)</span>
+          </div>
+
+          <div class="ingredients__table-row">
+            <span>Vitamina B6 (Piridoxina)</span>
+            <span>1,3 mg (100% VD)</span>
+          </div>
+
+          <div class="ingredients__table-row ingredients__table-row--bold">
+            <span>Sódio</span>
+            <span>120 mg (5% VD)</span>
+          </div>
+
+          <div class="ingredients__table-footer">
+            * % Valores Diários com base em uma dieta de 2.000 kcal ou 8.400 kJ. Seus valores diários podem ser maiores ou menores dependendo de suas necessidades energéticas. ** VD não estabelecido.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="sobre" class="about">
+    <div class="container about__container">
+      
+      <div class="about__visual">
+        <img src="assets/images/energy_bg.png" alt="Ingredientes ativos do Energético Mansão Maromba explodindo em chamas laranjas" class="about__image" id="about-decor-image">
+      </div>
+
+      <div class="about__content">
+        <h2 class="title-section" style="text-align: left; margin-bottom: 25px;" id="about-section-title">
+          O Segredo da <span>Fórmula Monstra</span>
+        </h2>
+        <p class="about__text">
+          Cada lata de Mansão Maromba foi formulada após rigorosos testes de performance. Combinamos as doses exatas de cafeína anidra purificada para energia imediata e beta-alanina para amortecer o ácido lático. O resultado é um rendimento constante da primeira à última série de exercícios, sem queda brusca e sem ingredientes de baixa qualidade.
+        </p>
+
+        <!-- Painel de Métricas Rápidas Animatrópicas -->
+        <div class="about__metrics">
+          
+          <div class="about__metric-card" id="metric-card-1">
+            <span class="about__metric-val" data-target="200" data-suffix="mg">0mg</span>
+            <span class="about__metric-label">Cafeína</span>
+          </div>
+
+          <div class="about__metric-card" id="metric-card-2">
+            <span class="about__metric-val" data-target="1500" data-suffix="mg">0mg</span>
+            <span class="about__metric-label">Beta-Alanina</span>
+          </div>
+
+          <div class="about__metric-card" id="metric-card-3">
+            <span class="about__metric-val" data-target="0" data-suffix="%">0%</span>
+            <span class="about__metric-label">Açúcar</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section id="depoimentos" class="testimonials">
+    <div class="container">
+      <h2 class="title-section" id="testimonials-section-title">
+        Aprovado pelos <span>Monstros</span>
+      </h2>
+      
+      <div class="testimonials__grid">
+        
+        <!-- Depoimento 1 -->
+        <div class="testimonials__card" id="testimonial-card-1">
+          <div class="testimonials__rating">
+            <!-- 5 estrelas amarelas em SVG -->
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonials__text">
+            "Sempre tive preguiça de pré-treino em pó devido à bagunça. O Mansão Maromba gelado é o melhor energético que já tomei. O foco que dá na hora da musculação é absurdo e não dá aquela tremedeira chata."
+          </p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar-container">
+              <img src="assets/images/avatar1.png" alt="Felipe 'Blade' Neto" class="testimonials__avatar">
+            </div>
+            <div>
+              <h4 class="testimonials__name">Felipe 'Blade' Neto</h4>
+              <span class="testimonials__role">Atleta Fisiculturista</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="testimonials__card" id="testimonial-card-2">
+          <div class="testimonials__rating">
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonials__text">
+            "Sabor de Laranja Vulcânica é inacreditável de bom! Tomo 20 minutos antes do treino de pernas e consigo manter a intensidade do início ao fim. Minha resistência dobrou!"
+          </p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar-container">
+              <img src="assets/images/avatar2.png" alt="Mariana Costa" class="testimonials__avatar">
+            </div>
+            <div>
+              <h4 class="testimonials__name">Mariana Costa</h4>
+              <span class="testimonials__role">Personal Trainer & Atleta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="testimonials__card" id="testimonial-card-3">
+          <div class="testimonials__rating">
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="testimonials__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonials__text">
+            "Finalmente um energético que entende a necessidade do público fitness hardcore. Zero carboidratos de verdade e ingredientes na dose certa. Não fico sem na geladeira."
+          </p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar-container" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);color:#fff;font-family:var(--font-title);font-weight:900;font-size:1.15rem;border:2px solid rgba(255, 85, 0, 0.4);">
+              RL
+            </div>
+            <div>
+              <h4 class="testimonials__name">Dr. Ricardo Lemos</h4>
+              <span class="testimonials__role">Nutricionista Esportivo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CALL TO ACTION SECTION ==================== -->
+  <section id="comprar" class="cta">
+    <div class="container cta__container">
+      <div class="cta__content">
+        <span class="cta__badge">PROMOÇÃO DE LANÇAMENTO</span>
+        <h2 class="cta__title">
+          Desperte o <span>Monstro em Você</span>
+        </h2>
+        <p class="cta__description">
+          Garanta agora o seu pack promocional com desconto exclusivo de lançamento e frete grátis para todo o Brasil. Estoque limitado!
+        </p>
+
+        <!-- Caixa de Oferta com Preço -->
+        <div class="cta__price-box">
+          <span class="cta__price-original">R$ 179,90</span>
+          <div class="cta__price-current">
+            <span class="cta__price-currency">R$</span>
+            <span class="cta__price-val">129,90</span>
+          </div>
+          <span class="cta__price-sub">Pack com 12 latas (apenas R$ 10,82 por lata!)</span>
+        </div>
+
+        <button class="btn btn--primary btn--large btn--pulse-glow" id="cta-purchase-btn" onclick="alert('Parabéns pela decisão de esmagar seus limites! (Demonstração)')">
+          Garantir Meu Pack
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.21 9l-4.38-6.56c-.19-.28-.51-.42-.83-.42-.32 0-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.88 1.46h13.08c.88 0 1.65-.62 1.88-1.46l2.54-9.27.04-.27c0-.55-.45-1-1-1h-4.79zM9 9l3-4.5L15 9H9zm3 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+          </svg>
+        </button>
+
+        <div class="cta__urgency">
+          <div class="cta__urgency-item">
+            <!-- Ícone de relógio -->
+            <svg class="cta__urgency-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span>Apenas 47 Packs Disponíveis</span>
+          </div>
+          <div class="cta__urgency-item">
+            <!-- Ícone de caminhão -->
+            <svg class="cta__urgency-icon" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm0-5.5h-3V9h3v4z"/></svg>
+            <span>Frete Grátis para todo o Brasil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      
+      <div class="footer__brand">
+        <a href="#inicio" class="footer__logo" id="footer-logo-link">
+          <img src="assets/images/logo.png" alt="Logo Mansão Maromba" class="header__logo-img" style="height: 36px; vertical-align: middle; margin-right: 8px;">
+          Mansão <span>Maromba</span>
+        </a>
+        <p class="footer__description">
+          O sabor energético definitivo para quem busca alta performance, foco mental absoluto e energia explosiva sem quebrar a dieta.
+        </p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg class="footer__social-icon" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg class="footer__social-icon" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="YouTube">
+            <svg class="footer__social-icon" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.516 0-9.387.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.387.507 9.387.507s7.517 0 9.387-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Navegação</h4>
+        <ul class="footer__list">
+          <li><a href="#inicio" class="footer__link">Início</a></li>
+          <li><a href="#beneficios" class="footer__link">Benefícios</a></li>
+          <li><a href="#ingredientes" class="footer__link">Fórmula</a></li>
+          <li><a href="#sobre" class="footer__link">Sobre Nós</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Ajuda</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">FAQ</a></li>
+          <li><a href="#" class="footer__link">Envio e Entrega</a></li>
+          <li><a href="#" class="footer__link">Termos de Uso</a></li>
+          <li><a href="#" class="footer__link">Políticas de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Contato</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">contato@mansaomaromba.com</a></li>
+          <li><a href="#" class="footer__link">0800 555 MANSÃO</a></li>
+          <li><span class="footer__link" style="color:var(--color-text-muted);">São Paulo - SP</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="footer__copy">
+        &copy; 2026 Mansão Maromba. Desenvolvido por Antigravity AI. Todos os direitos reservados.
+      </p>
+      <p class="footer__disclaimer">
+        AVISO: Mansão Maromba é um produto fictício criado para fins acadêmicos e demonstrativos de desenvolvimento de interfaces. A tabela nutricional e depoimentos contidos nesta página são inteiramente fictícios.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lógica JavaScript do App -->
+  <script src="js/app.js"></script>
+</body>
+</html>

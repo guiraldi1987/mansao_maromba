@@ -1,0 +1,165 @@
+/* --- COMPONENTE: CTA --- */
+
+.cta {
+  background-image: linear-gradient(135deg, rgba(10, 10, 12, 0.95) 0%, rgba(20, 10, 5, 0.98) 100%), 
+                    url('../../assets/images/energy_bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+.cta__content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__badge {
+  font-family: var(--font-title);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-neon);
+}
+
+.cta__title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.cta__title span {
+  color: var(--color-accent);
+  text-shadow: 0 0 10px rgba(255, 85, 0, 0.3);
+}
+
+.cta__description {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Caixa de Preço com urgência */
+.cta__price-box {
+  background: rgba(24, 24, 31, 0.85);
+  border: 1px solid rgba(255, 85, 0, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 30px 50px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.cta__price-box::before {
+  content: 'OFERTA LIMITADA';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.cta__price-original {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+.cta__price-current {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.cta__price-currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.cta__price-val {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.cta__price-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 5px;
+}
+
+/* Elementos de Urgência */
+.cta__urgency {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--color-accent-secondary);
+}
+
+.cta__urgency-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta__urgency-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-accent-secondary);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 576px) {
+  .cta__price-box {
+    padding: 25px 30px;
+    width: 100%;
+  }
+  
+  .cta__urgency {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
